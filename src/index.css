@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this to your global CSS (e.g., index.css or App.css) */
+@font-face {
+    font-family: 'PoynterOldStyleRoman';
+    src: url('https://raw.githubusercontent.com/Sushanth-Hebri/Poynter-Old-Style-Roman-font-CDN/main/PoynterOSDisp-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .title {
+    font-family: 'PoynterOldStyleRoman', sans-serif;
+    letter-spacing: -0.025em;
+  }
+
+  @layer utilities {
+    .animate-fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+  
+    .animate-slide-in {
+      animation: slideIn 0.5s ease-out forwards;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better typography */
+ 
+  
+  /* Dark mode transitions */
+  .dark {
+    color-scheme: dark;
+  }
+  
+  /* Loading spinner */
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Improved focus styles */
+  *:focus-visible {
+    outline: 2px solid theme('colors.red.500');
+    outline-offset: 2px;
+  }  
